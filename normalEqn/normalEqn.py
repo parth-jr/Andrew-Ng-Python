@@ -13,12 +13,9 @@ y = y.reshape(m,1)
 one = np.ones((m,1))
 
 X = np.concatenate((one,x), axis = 1)
-theta = np.zeros((3, 1))
+
+print("Values Before Normalisation: ", X)
 
 X = (X-np.mean(X))/np.std(X)
 
-def cc(theta, X, y):
-    A = np.dot(X,theta)-y
-    return float(((1/(2*m)) * np.dot(A.T, A)))
-
-print(cc(theta, X, y))
+print("Values After Normalisation: ", X)
