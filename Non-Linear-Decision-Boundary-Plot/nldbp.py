@@ -75,7 +75,7 @@ for i in range(m):
         else:
             plt.plot(X[i,0],X[i,1],"+", color = '#1f63a7', markersize = 7)
 
-clf = SVC(kernel = 'rbf', gamma=0.7, C=1 )
+clf = SVC(C = 1, gamma = 0.7, kernel = 'rbf')
 clf.fit(X, y.reshape(m))
 
 x1_min, x1_max = X[:, 0].min()-0.25, X[:, 0].max()+0.25
